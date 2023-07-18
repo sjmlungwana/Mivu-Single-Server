@@ -16,7 +16,7 @@ This Terraform configuration code will create a server in aws europe region in t
 
 ### AWS Account -> Access Keys
 
-login to your AWS account, search IAM, select users, select your username, select securty credentials, create Access Keys, download the csv file and copy your keys.
+login to your AWS account, search IAM, select users, select your username, select security credentials, create Access Keys, download the csv file and copy your keys.
 
 ### Terraform Installation
 
