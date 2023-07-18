@@ -41,10 +41,10 @@ You need to use those keys you created from AWS console
 run this command
 
 1. aws configure
-AWS Access Key ID [None]: ACCESS KEYS
-AWS Secret Access Key [None]: SECRETE ACCESS KETS
-Default region name [None]: [leave this one]
-Default output format [None]: json
+2. AWS Access Key ID [None]: ACCESS KEYS
+3. AWS Secret Access Key [None]: SECRETE ACCESS KETS
+4. Default region name [None]: [leave this one]
+5. Default output format [None]: json
 
 #### ______ Running Terraform Configuration Code _______
 
