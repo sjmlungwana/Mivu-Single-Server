@@ -46,7 +46,7 @@ AWS Secret Access Key [None]: SECRETE ACCESS KETS
 Default region name [None]: [leave this one]
 Default output format [None]: json
 
-#### _________________________________________ Running Terraform Configuration Code ____________________________________
+#### ______ Running Terraform Configuration Code _______
 
 First clone this repo to your local machine
 
