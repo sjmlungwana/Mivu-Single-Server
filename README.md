@@ -7,7 +7,7 @@ This Terraform configuration code will create a server in aws europe region in t
 3. Salt-Master (version 3006)
 4. Salt-Minion (version 3006)
 
-#### In order to foolow up with this lab you need the following things.
+#### In order to follow up with this lab you need the following things.
 
 1. AWS Account -> access keys
 2. Terraform installed on your machine
