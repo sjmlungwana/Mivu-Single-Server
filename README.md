@@ -47,3 +47,15 @@ Default region name [None]: [leave this one]
 Default output format [None]: json
 
 #### _________________________________________ Running Terraform Configuration Code ____________________________________
+
+First clone this repo to your local machine
+
+git clone https://github.com/sjmlungwana/Mivu-Single-Server.git
+
+cd Mivu-Single-Server
+
+terraform init
+
+terraform plan
+
+terraform apply -auto-approve
