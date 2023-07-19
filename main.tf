@@ -12,6 +12,7 @@ data "aws_region" "current" {}
 locals {
   team        = "DevOps"
   environment = "Dev"
+  Terraform = "True"
 }
 
 #Define the VPC
@@ -20,7 +21,7 @@ resource "aws_vpc" "MiVu_VPC" {
   tags = {
     Name        = "MiVu VPC"
     Environment = "Test ENV"
-    Terraform   = "true"
+    Terraform   = "True"
     Region      = data.aws_region.current.name
   }
 }
@@ -32,7 +33,7 @@ resource "aws_subnet" "private_subnet" {
   availability_zone = data.aws_availability_zone.available.name
   tags = {
     Name      = "Private Subnet"
-    Terraform = "true"
+    Terraform = "True"
   }
 }
 
@@ -41,7 +42,7 @@ resource "aws_internet_gateway" "internet_gateway" {
   vpc_id = aws_vpc.MiVu_VPC.id
   tags = {
     Name      = "MiVu IGW"
-    Terraform = "true"
+    Terraform = "True"
   }
 }
 
@@ -77,11 +78,15 @@ resource "aws_key_pair" "generated" {
   lifecycle {
     ignore_changes = [key_name]
   }
+  tags = {
+    Name = "Main Key-Pair"
+    Terraform = "True"
+  }
 }
 
 # Security Groups
 resource "aws_security_group" "ingress-ssh" {
-  name   = "allow-all-ssh"
+  name   = "Main SG"
   vpc_id = aws_vpc.MiVu_VPC.id
   ingress {
     description = "SSH"
@@ -309,7 +314,8 @@ resource "aws_network_acl" "network_acl" {
   }
 
   tags = {
-    Name = "main"
+    Name = "Main NACL"
+    Terraform = "True"
   }
 }
 
@@ -385,5 +391,6 @@ resource "aws_eip" "server_eip" {
   #vpc      = true
   tags = {
     Name = "Mivu Server EIP"
+    Terraform = "True"
   }
 }
