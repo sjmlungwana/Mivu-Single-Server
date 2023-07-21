@@ -61,4 +61,5 @@ terraform plan
 terraform apply -auto-approve
 
 When you are done testing this infrastructure and you want to take it down use this command.
+
 terraform destroy -auto-approve
